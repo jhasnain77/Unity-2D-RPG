@@ -52,6 +52,69 @@ public class BattleUnit
         get { return Mathf.FloorToInt(((2 * Base.MP) * Level) / 100f) + Level + 20; }
     }
 
+    public DamageDetails TakeDamage(Ability ability, BattleUnit attacker) {
+        float critical = 1f;
+        if (Random.value * 100f <= 6.25) {
+            critical = 2f;
+        }
 
+        float element = ElementChart.GetEffectiveness(ability.Base.ElementType, this.Base.ElementType);
 
+        var damageDetails = new DamageDetails() {
+            Element = element,
+            Critical = critical,
+            Fainted = false
+        };
+
+        float modifiers = element * critical;
+
+        float attack;
+        float defense;
+
+        switch (ability.Base.Category) {
+            case AbilityCategory.Physical:
+                attack = attacker.Attack;
+                defense = Defense;
+                break;
+            case AbilityCategory.Magic:
+                attack = attacker.MAttack;
+                defense = MDefense;
+                break;
+            case AbilityCategory.Status:
+                modifiers = 0f;
+                attack = 0f;
+                defense = 1f;
+                break;
+            default:
+                attack = attacker.Attack;
+                defense = Defense;
+                break;
+        }
+
+        float a = ((2 * attacker.Level) + 10) / 250f;
+        float d = a * ability.Base.Power * ((float)attack / defense) + 2;
+        int damage = Mathf.FloorToInt(d * modifiers);
+
+        CurrentHP -= damage;
+        if (CurrentHP <= 0) {
+            CurrentHP = 0;
+            damageDetails.Fainted = true;
+        }
+
+        return damageDetails;
+    }
+
+    public Ability GetRandomAbility() {
+        int r = Random.Range(0, Abilities.Count);
+        return Abilities[r];
+    }
+
+}
+
+public class DamageDetails {
+    public bool Fainted { get; set; }
+
+    public float Critical { get; set; }
+
+    public float Element { get; set; }
 }
