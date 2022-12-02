@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3405e8e8da8841949b47c772bb271285, type: 3}
   m_Name: LightShock
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  category: 0
-  elementType: 0
-  power: 0
-  accuracy: 0
-  mp: 0
+  name: Light Shock
+  description: A small burst of light is formed and bursts when coming into contact
+    with an enemy.
+  category: 1
+  elementType: 8
+  power: 60
+  accuracy: 100
+  mp: 14

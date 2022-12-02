@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3405e8e8da8841949b47c772bb271285, type: 3}
   m_Name: BasicAttack
   m_EditorClassIdentifier: 
-  name: BasicAttack
+  name: Attack
   description: A basic physical attack with no additional effects.
   category: 0
   elementType: 0
-  power: 50
+  power: 40
   accuracy: 100
   mp: 0

@@ -12,16 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ba0764c5831834cb9e98ec6f46d6e9, type: 3}
   m_Name: Miyu
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  partySprite: {fileID: 0}
-  enemySprite: {fileID: 0}
-  elementType: 0
-  hp: 0
-  attack: 0
-  defense: 0
-  mAttack: 0
-  mDefense: 0
-  speed: 0
-  mp: 0
-  learnableAbilities: []
+  name: Miyu
+  description: The main protagonist. A fast unit with high attack and magic attack.
+  partySprite: {fileID: -8469499509366363298, guid: 8eee2d58fc6d79b47bdc35c834a0df04, type: 3}
+  enemySprite: {fileID: 3495149437026503900, guid: 8eee2d58fc6d79b47bdc35c834a0df04, type: 3}
+  elementType: 8
+  hp: 88
+  attack: 120
+  defense: 75
+  mAttack: 100
+  mDefense: 75
+  speed: 142
+  mp: 100
+  learnableAbilities:
+  - abilityBase: {fileID: 11400000, guid: df9dba87083a9c840b16bb79d9acd1bb, type: 2}
+    level: 1
+  - abilityBase: {fileID: 11400000, guid: 405dadaa5cedb144a9c15c7ffac5c8e2, type: 2}
+    level: 9
+  - abilityBase: {fileID: 11400000, guid: 405dadaa5cedb144a9c15c7ffac5c8e2, type: 2}
+    level: 17

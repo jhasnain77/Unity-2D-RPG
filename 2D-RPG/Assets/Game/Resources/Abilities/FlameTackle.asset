@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3405e8e8da8841949b47c772bb271285, type: 3}
   m_Name: FlameTackle
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  category: 0
-  elementType: 0
-  power: 0
-  accuracy: 0
-  mp: 0
+  name: Flame Tackle
+  description: The user is engulfed in flames before attacking with their full body.
+  category: 1
+  elementType: 1
+  power: 50
+  accuracy: 95
+  mp: 8

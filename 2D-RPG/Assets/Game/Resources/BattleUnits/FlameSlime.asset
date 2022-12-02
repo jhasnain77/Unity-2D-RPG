@@ -12,16 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ba0764c5831834cb9e98ec6f46d6e9, type: 3}
   m_Name: FlameSlime
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  partySprite: {fileID: 0}
-  enemySprite: {fileID: 0}
-  elementType: 0
-  hp: 0
-  attack: 0
-  defense: 0
-  mAttack: 0
-  mDefense: 0
-  speed: 0
-  mp: 0
-  learnableAbilities: []
+  name: Flame Slime
+  description: A small magical entity imbued with the flame element.
+  partySprite: {fileID: 6071232759255794386, guid: 0b332936422d62e4e928d29aa126adf4, type: 3}
+  enemySprite: {fileID: 8979429955977382746, guid: 0b332936422d62e4e928d29aa126adf4, type: 3}
+  elementType: 1
+  hp: 38
+  attack: 30
+  defense: 41
+  mAttack: 30
+  mDefense: 41
+  speed: 60
+  mp: 80
+  learnableAbilities:
+  - abilityBase: {fileID: 11400000, guid: df9dba87083a9c840b16bb79d9acd1bb, type: 2}
+    level: 1
+  - abilityBase: {fileID: 11400000, guid: 52ec0f07164c83149bce1207a0bd6ba2, type: 2}
+    level: 2

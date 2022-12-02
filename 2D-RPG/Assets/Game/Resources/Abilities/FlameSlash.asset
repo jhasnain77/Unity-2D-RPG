@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3405e8e8da8841949b47c772bb271285, type: 3}
   m_Name: FlameSlash
   m_EditorClassIdentifier: 
-  name: 
-  description: 
+  name: Flame Slash
+  description: Imbue your weapon with the power of fire and unleash a powerful attack
+    upon your enemy.
   category: 0
-  elementType: 0
-  power: 0
-  accuracy: 0
-  mp: 0
+  elementType: 1
+  power: 75
+  accuracy: 100
+  mp: 22
