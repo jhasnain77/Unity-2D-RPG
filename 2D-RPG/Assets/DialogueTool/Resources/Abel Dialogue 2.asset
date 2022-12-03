@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e95ba1538fbfe04f88a6d37908d4df5, type: 3}
+  m_Name: Abel Dialogue 2
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: 31867746-77de-4e88-ab87-4674ed40c736
+    PortName: Next
+    TargetNodeGuid: f1263a9e-3a6e-4bc2-896f-b048f2c697af
+  - BaseNodeGuid: f1263a9e-3a6e-4bc2-896f-b048f2c697af
+    PortName: 40
+    TargetNodeGuid: a2482248-0c62-473a-ae0e-8990103711e3
+  - BaseNodeGuid: f1263a9e-3a6e-4bc2-896f-b048f2c697af
+    PortName: 39
+    TargetNodeGuid: 417ff334-c4ea-4e7a-91bd-75a7c785ff84
+  - BaseNodeGuid: 417ff334-c4ea-4e7a-91bd-75a7c785ff84
+    PortName: 34
+    TargetNodeGuid: a2482248-0c62-473a-ae0e-8990103711e3
+  - BaseNodeGuid: 417ff334-c4ea-4e7a-91bd-75a7c785ff84
+    PortName: 35
+    TargetNodeGuid: 6824954f-f2ed-43d6-af89-acebfa449b70
+  - BaseNodeGuid: 6824954f-f2ed-43d6-af89-acebfa449b70
+    PortName: 0
+    TargetNodeGuid: 1503c8e1-d1e7-43a2-a9cd-5b6d43f28892
+  DialogueNodeData:
+  - Guid: f1263a9e-3a6e-4bc2-896f-b048f2c697af
+    DialogueText: What??
+    LocalizationIndex: 38
+    Position: {x: 306, y: 159}
+  - Guid: a2482248-0c62-473a-ae0e-8990103711e3
+    DialogueText: Fine
+    LocalizationIndex: 42
+    Position: {x: 741, y: 260}
+  - Guid: 417ff334-c4ea-4e7a-91bd-75a7c785ff84
+    DialogueText: You want my help?
+    LocalizationIndex: 41
+    Position: {x: 741, y: 57}
+  - Guid: 6824954f-f2ed-43d6-af89-acebfa449b70
+    DialogueText: Fine but he joins
+    LocalizationIndex: 42
+    Position: {x: 1162, y: -3}
+  - Guid: 1503c8e1-d1e7-43a2-a9cd-5b6d43f28892
+    DialogueText: Abel joined message
+    LocalizationIndex: 43
+    Position: {x: 1636, y: -62}

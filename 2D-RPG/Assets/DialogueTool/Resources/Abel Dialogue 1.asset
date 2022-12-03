@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e95ba1538fbfe04f88a6d37908d4df5, type: 3}
+  m_Name: Abel Dialogue 1
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: 31867746-77de-4e88-ab87-4674ed40c736
+    PortName: Next
+    TargetNodeGuid: f1263a9e-3a6e-4bc2-896f-b048f2c697af
+  DialogueNodeData:
+  - Guid: f1263a9e-3a6e-4bc2-896f-b048f2c697af
+    DialogueText: What do you want?
+    LocalizationIndex: 37
+    Position: {x: 270, y: 176}

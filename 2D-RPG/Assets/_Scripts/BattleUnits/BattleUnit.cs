@@ -2,25 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+
 public class BattleUnit
 {
 
-    public BattleUnitBase Base { get; set; }
-    public int Level { get; set; }
+    [SerializeField] BattleUnitBase _base;
+    [SerializeField] int level;
+
+    public BattleUnitBase Base {
+        get {
+            return _base;
+        }
+    }
+
+    public int Level {
+        get {
+            return level;
+        }
+    }
 
     public int CurrentHP { get; set; }
+    public int CurrentMP { get; set; }
 
     public List<Ability> Abilities { get; set; }
 
-    public BattleUnit(BattleUnitBase thisBase, int thisLevel) {
-        Base = thisBase;
-        Level = thisLevel;
+    public void Init()
+    {
         CurrentHP = HP;
+        CurrentMP = MP;
 
         Abilities = new List<Ability>();
-        foreach (var ability in Base.LearnableAbilities) {
+        foreach (var ability in Base.LearnableAbilities)
+        {
             if (ability.Level <= Level)
                 Abilities.Add(new Ability(ability.Base));
+
+            if (Abilities.Count >= 4)
+                break;
         }
     }
 

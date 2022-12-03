@@ -23,11 +23,11 @@ MonoBehaviour:
   mAttack: 100
   mDefense: 75
   speed: 142
-  mp: 100
+  mp: 140
   learnableAbilities:
   - abilityBase: {fileID: 11400000, guid: df9dba87083a9c840b16bb79d9acd1bb, type: 2}
     level: 1
   - abilityBase: {fileID: 11400000, guid: 405dadaa5cedb144a9c15c7ffac5c8e2, type: 2}
     level: 9
-  - abilityBase: {fileID: 11400000, guid: 405dadaa5cedb144a9c15c7ffac5c8e2, type: 2}
+  - abilityBase: {fileID: 11400000, guid: b5608ec95a57a4949b95075ba3d89aab, type: 2}
     level: 17

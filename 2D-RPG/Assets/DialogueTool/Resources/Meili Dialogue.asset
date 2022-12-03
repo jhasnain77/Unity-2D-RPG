@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e95ba1538fbfe04f88a6d37908d4df5, type: 3}
+  m_Name: Meili Dialogue
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: fb6d95da-d62d-4978-97e5-a571f3b6c5d9
+    PortName: Next
+    TargetNodeGuid: 68772d64-9d86-4aba-a970-7e6b3783bda9
+  - BaseNodeGuid: 68772d64-9d86-4aba-a970-7e6b3783bda9
+    PortName: 0
+    TargetNodeGuid: 5c746d41-6a62-40ee-a374-f7bc8f4d579a
+  - BaseNodeGuid: 5c746d41-6a62-40ee-a374-f7bc8f4d579a
+    PortName: 0
+    TargetNodeGuid: 34f9beeb-ce86-4388-bd3d-f41907487349
+  - BaseNodeGuid: 34f9beeb-ce86-4388-bd3d-f41907487349
+    PortName: 34
+    TargetNodeGuid: 044ec8b4-0781-4dd3-8d12-97ec29376ac9
+  - BaseNodeGuid: 34f9beeb-ce86-4388-bd3d-f41907487349
+    PortName: 35
+    TargetNodeGuid: 570e28db-629f-4b2a-b4a9-ed5495f96ed5
+  - BaseNodeGuid: 044ec8b4-0781-4dd3-8d12-97ec29376ac9
+    PortName: 0
+    TargetNodeGuid: 783f3471-b26a-47ee-a898-c81bb34a718c
+  DialogueNodeData:
+  - Guid: 5c746d41-6a62-40ee-a374-f7bc8f4d579a
+    DialogueText: Need help?
+    LocalizationIndex: 45
+    Position: {x: 713, y: 141}
+  - Guid: 34f9beeb-ce86-4388-bd3d-f41907487349
+    DialogueText: Can I join?
+    LocalizationIndex: 46
+    Position: {x: 1069, y: 141}
+  - Guid: 570e28db-629f-4b2a-b4a9-ed5495f96ed5
+    DialogueText: Aw man
+    LocalizationIndex: 47
+    Position: {x: 1553, y: 260}
+  - Guid: 044ec8b4-0781-4dd3-8d12-97ec29376ac9
+    DialogueText: Yay
+    LocalizationIndex: 48
+    Position: {x: 1553, y: 22}
+  - Guid: 783f3471-b26a-47ee-a898-c81bb34a718c
+    DialogueText: Join Message
+    LocalizationIndex: 49
+    Position: {x: 2016, y: 98}
+  - Guid: 68772d64-9d86-4aba-a970-7e6b3783bda9
+    DialogueText: Its you!
+    LocalizationIndex: 44
+    Position: {x: 276, y: 158}
