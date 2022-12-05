@@ -20,4 +20,10 @@ public class Party : MonoBehaviour
     public List<BattleUnit> GetAllUnits() {
         return unitList;
     }
+
+    public void SwapPartyMembers(int index1, int index2) {
+        BattleUnit temp = unitList[index1];
+        unitList[index1] = unitList[index2];
+        unitList[index2] = temp;
+    }
 }

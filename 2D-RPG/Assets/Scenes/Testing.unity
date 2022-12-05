@@ -19271,6 +19271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitList:
+  - _base: {fileID: 11400000, guid: e8ae4b8b2c549164f9b1281b91a30cd4, type: 2}
+    level: 100
   - _base: {fileID: 11400000, guid: acb656d030d2567449eac06b68340cd8, type: 2}
     level: 20
   - _base: {fileID: 11400000, guid: ff4b58cc3c55ad54587951c093377d0a, type: 2}

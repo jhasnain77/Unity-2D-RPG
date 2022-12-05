@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ba0764c5831834cb9e98ec6f46d6e9, type: 3}
+  m_Name: Berto
+  m_EditorClassIdentifier: 
+  name: Berto
+  description: A cool italian guy
+  partySprite: {fileID: -2125796001302064824, guid: 3200478fef1baba4bad73545cbfd0205, type: 3}
+  enemySprite: {fileID: -8578417769676584460, guid: 3200478fef1baba4bad73545cbfd0205, type: 3}
+  elementType: 5
+  hp: 100
+  attack: 100
+  defense: 100
+  mAttack: 100
+  mDefense: 100
+  speed: 100
+  mp: 120
+  learnableAbilities:
+  - abilityBase: {fileID: 11400000, guid: df9dba87083a9c840b16bb79d9acd1bb, type: 2}
+    level: 0
+  - abilityBase: {fileID: 11400000, guid: aff2894e0846f0b4b92f1059d839bc76, type: 2}
+    level: 12

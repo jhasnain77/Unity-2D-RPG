@@ -24,13 +24,19 @@ public class PauseMenu : MonoBehaviour
 
     int selectedMenuOption;
     int selectedPartyMember;
+    int partyMemberToSwitch;
 
     private void Awake() {
+
+        for (int i = 0; i < partyHUDs.Count; i++) {
+            partyHUDs[i].Init();
+        }
 
         SetupParty();
 
         selectedMenuOption = 0;
         selectedPartyMember = -1;
+        partyMemberToSwitch = -1;
 
         state = PauseMenuState.MenuOptions;
         UpdateMenuSelection();
@@ -78,20 +84,43 @@ public class PauseMenu : MonoBehaviour
             }
             UpdatePartySelection();
         } else if (Input.GetKeyDown(KeyCode.X)) {
-            selectedPartyMember = -1;
-            UpdatePartySelection();
-            state = PauseMenuState.MenuOptions;
-        }
+            if (partyMemberToSwitch == -1) {
+                selectedPartyMember = -1;
+                UpdatePartySelection();
+                state = PauseMenuState.MenuOptions;
+            } else {
+                partyHUDs[partyMemberToSwitch].PlayDeselectAnimation();
+                partyMemberToSwitch = -1;
+            }
+        } else if (Input.GetKeyDown(KeyCode.Z)) {
+            if (partyMemberToSwitch == -1) {
+                partyMemberToSwitch = selectedPartyMember;
+                partyHUDs[partyMemberToSwitch].PlaySelectedAnimation();
+            } else if (partyMemberToSwitch == selectedPartyMember) {
+                partyHUDs[partyMemberToSwitch].PlayDeselectAnimation();
+                partyMemberToSwitch = -1;
+            } else {
+                SwapPartyMembers();
+            }
+        } 
     }
 
     public void UpdatePartySelection() {
         for (int i = 0; i < partyMembers.Count; i++) {
             if (selectedPartyMember == i) {
                 partyHUDs[i].GetComponent<Image>().color = highlightedColor;
-            } else {
+            } else if (partyMemberToSwitch != i){
                 partyHUDs[i].GetComponent<Image>().color = Color.white;
             }
         }
+    }
+
+    public void SwapPartyMembers() {
+        player.GetComponent<Party>().SwapPartyMembers(partyMemberToSwitch, selectedPartyMember);
+        partyHUDs[partyMemberToSwitch].PlayDeselectAnimation();
+        partyMemberToSwitch = -1;
+        SetupParty();
+        UpdatePartySelection();
     }
 
     public void HandleMenuSelection() {
@@ -122,7 +151,7 @@ public class PauseMenu : MonoBehaviour
             } else if (selectedMenuOption == 6) {
                 Application.Quit();
             }
-        } else if (Input.GetKeyDown(KeyCode.Escape)) {
+        } else if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.X)) {
             Resume();
         }
     }

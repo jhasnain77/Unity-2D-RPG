@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PartyMemberHUD : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class PartyMemberHUD : MonoBehaviour
     [SerializeField] Image unitImage;
 
     BattleUnit _unit;
+    Vector3 originalPos;
+
+    public void Init() {
+        originalPos = transform.localPosition;
+    }
 
     public void SetData(BattleUnit unit)
     {
@@ -26,5 +32,13 @@ public class PartyMemberHUD : MonoBehaviour
         hpBar.SetHP((float)unit.CurrentHP / unit.HP);
         mpValue.text = $"{unit.CurrentMP} / {unit.MP}";
         mpBar.SetMP((float)unit.CurrentMP / unit.MP);
+    }
+
+    public void PlaySelectedAnimation() {
+        this.transform.DOLocalMoveX(originalPos.x + 50f, 0.25f);
+    }
+
+    public void PlayDeselectAnimation() {
+        this.transform.DOLocalMoveX(originalPos.x, 0.25f);
     }
 }
