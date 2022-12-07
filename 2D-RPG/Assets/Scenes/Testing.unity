@@ -7556,7 +7556,7 @@ MonoBehaviour:
   - {fileID: 1951008128}
   highlightedColor: {r: 0, g: 1, b: 0.9525311, a: 1}
   defaultColor: {r: 0, g: 0, b: 0, a: 1}
-  controls: {fileID: 0}
+  controls: {fileID: 1320976042}
 --- !u!1 &1127533836
 GameObject:
   m_ObjectHideFlags: 0
